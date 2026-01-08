@@ -1,6 +1,6 @@
 # Search Shortcuts
 
-An Anki addon that adds 5 configurable shortcut buttons below the search bar for quick access to your favorite searches.
+An Anki addon that adds up to 10 configurable shortcut buttons below the search bar for quick access to your favorite searches.
 
 ## Features
 
@@ -46,26 +46,9 @@ Default configuration:
 ### Viewing Saved Searches
 - Hover your mouse over any button to see its saved search in a tooltip
 
-## Installation
-
-1. Download the addon files
-2. Place them in your Anki addons folder
-3. Restart Anki
-4. Open the browser to see the shortcut buttons
-
-## Compatibility
-
-- Tested with Anki 25.02.5
-- Requires Anki 24.06 or later
-
 ## Use Cases
 
-Perfect for:
-- Quickly accessing frequently used tag combinations
-- Switching between different study queues
-- Finding specific card types or note types
-- Accessing custom filtered searches without retyping them
-- Managing multiple study workflows
+I personally use the saved searches for workflow, but they're annoying to set up, and to access by scrolling all the way to the top. This works in the same way but better.
 
 ## Technical Details
 
@@ -73,10 +56,6 @@ Perfect for:
 - Each profile has its own set of saved searches
 - Buttons use flat styling to match Anki's interface
 - Layout automatically adjusts to browser width
-
-## License
-
-GNU AGPLv3 or later
 
 ## Changelog
 
