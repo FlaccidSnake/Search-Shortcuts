@@ -1,0 +1,1 @@
+{"name": "Search Shortcuts", "mod": 0, "min_point_version": 0, "max_point_version": 0, "branch_index": 0, "disabled": false, "conflicts": [], "update_enabled": true, "human_version": "1.0.0", "homepage": "", "author": "FlaccidSnake", "config": {"num_shortcuts": 3, "button_labels": {"1": "ToDo", "2": "Done"}}}
