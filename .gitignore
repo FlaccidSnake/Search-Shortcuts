@@ -1,4 +1,10 @@
-**/__pycache__/
-*.ankiaddon
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Anki metadata and user configs
 meta.json
 config.json
+user_files/
+*.ankiaddon

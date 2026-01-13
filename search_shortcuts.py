@@ -107,6 +107,10 @@ def show_context_menu(browser, button, slot, pos):
     save_action = menu.addAction("Save current search")
     save_action.triggered.connect(lambda: save_current_search(browser, button, slot))
     
+    # Rename button action
+    rename_action = menu.addAction("Rename button")
+    rename_action.triggered.connect(lambda: rename_button(browser, button, slot))
+    
     # Clear search action
     shortcuts = load_shortcuts()
     if shortcuts.get(str(slot), ""):
@@ -142,6 +146,40 @@ def clear_search(browser, button, slot):
     # Update button tooltip
     button.setToolTip(f"Slot {slot}: (empty - right-click to save current search)")
     showInfo(f"Cleared slot {slot}")
+
+def rename_button(browser, button, slot):
+    """Rename the button label"""
+    from aqt.utils import getText
+    
+    current_label = get_button_label(slot)
+    
+    # Show input dialog
+    new_label, ok = getText(
+        f"Enter new label for button {slot}:",
+        default=current_label,
+        title="Rename Button"
+    )
+    
+    if ok and new_label is not None:
+        new_label = new_label.strip()
+        
+        # Save to config
+        config = get_config()
+        if "button_labels" not in config:
+            config["button_labels"] = {}
+        
+        if new_label:
+            config["button_labels"][str(slot)] = new_label
+        else:
+            # If empty, remove custom label (revert to default)
+            if str(slot) in config["button_labels"]:
+                del config["button_labels"][str(slot)]
+        
+        mw.addonManager.writeConfig(__name__, config)
+        
+        # Update button text
+        button.setText(new_label if new_label else f"♡ {slot}")
+        showInfo(f"Button {slot} renamed! Label will persist across sessions.")
 
 # Register the hook to add buttons when browser opens
 gui_hooks.browser_will_show.append(add_search_shortcuts)
