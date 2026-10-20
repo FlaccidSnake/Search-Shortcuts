@@ -35,6 +35,11 @@ Default configuration:
 2. Right-click on any shortcut button (♡ 1-5)
 3. Select "Save current search"
 
+### Filter mode
+1. Right-click on a button with a saved search
+2. Toggle "Filter mode (add to current search)"
+3. Left clicking the button will now add the search term to the searchbar instead of replacing it
+
 ### Running a Saved Search
 1. Left-click on any shortcut button that has a saved search
 2. The search will run immediately
@@ -65,3 +70,9 @@ I personally use the saved searches for workflow, but they're annoying to set up
 - Right-click to save/clear searches
 - Left-click to execute searches
 - Persistent storage per profile
+
+### Version 1.0.1
+- Added renaming from the browser instead of just the config
+
+### Version 1.0.2
+- Added filter mode
