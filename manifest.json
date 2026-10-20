@@ -2,9 +2,7 @@
     "package": "search_shortcuts",
     "name": "Search Shortcuts",
     "author": "FlaccidSnake",
-    "version": "1.0.0",
-    "homepage": "",
-    "conflicts": [],
-    "min_anki_version": "24.06",
-    "max_anki_version": ""
+    "version": "1.0.1",
+    "homepage": "https://github.com/FlaccidSnake/Search-Shortcuts/issues",
+    "conflicts": []
 }
